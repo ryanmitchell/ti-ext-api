@@ -4,7 +4,7 @@ namespace Igniter\Api\ApiResources;
 
 use Igniter\Api\Classes\ApiController;
 use Igniter\Api\Classes\APIOrderManager;
-use \Admin\Models\Orders_model;
+use Admin\Models\Orders_model;
 use Illuminate\Support\Facades\Request;
 
 /**
@@ -51,7 +51,7 @@ class Orders extends ApiController
             Request::merge(['customer_id' => $token->tokenable_id]);
         }
 
-        $this->orderManager->saveOrder(new \Admin\Models\Orders_model, Request::all());
+        $this->orderManager->saveOrder(new Orders_model, Request::all());
     }
 
     public function update()

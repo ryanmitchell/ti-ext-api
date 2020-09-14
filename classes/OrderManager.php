@@ -56,11 +56,11 @@ class APIOrderManager extends OrderManager
             $item['rowId'] = md5(uniqid());
             $menuItems[] = $item;
 
-            $total += $item['price']*$item['qty'];
+            $total += $item['price'] * $item['qty'];
             $totalItems += $item['qty'];
             if (!empty($item['options'])) {
                 foreach ($item['options'] as $option) {
-                    $total += $option['price']*$option['qty'];
+                    $total += $option['price'] * $option['qty'];
                 }
             }
         }
